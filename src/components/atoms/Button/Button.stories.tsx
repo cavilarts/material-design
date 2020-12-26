@@ -19,7 +19,7 @@ const buttonSettings = {
 export default buttonSettings as Meta;
 
 export const button: Story<buttonProps> = ({ type }) => {
-  const buttonType = calcButtonType(type);
+  const buttonType = calcButtonType(type || 'primary');
 
   return <Button type={buttonType}>Click Me</Button>;
 };
