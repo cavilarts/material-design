@@ -20,11 +20,12 @@ export interface inputProps {
     | 'week';
   label?: string;
   placeholder?: string;
+  id?: string;
   onChange?: (event: SyntheticEvent) => void;
   onKeyDown?: (event: SyntheticEvent) => void;
 }
 
-const Input: React.FC<inputProps> = ({ type, label, placeholder, onChange, onKeyDown }) => {
+const Input: React.FC<inputProps> = ({ type, label, placeholder, id, onChange, onKeyDown }) => {
   const [inputFocus, setInputFocus] = useState(false);
 
   const onChangeCallback = useCallback(
@@ -48,12 +49,15 @@ const Input: React.FC<inputProps> = ({ type, label, placeholder, onChange, onKey
     <div className='input__wrapper'>
       <span className='input__labelWrapper'>
         {label ? (
-          <label className={classNames('input__label', { 'input__label--active': inputFocus })}>{label}</label>
+          <label htmlFor={id} className={classNames('input__label', { 'input__label--active': inputFocus })}>
+            {label}
+          </label>
         ) : null}
       </span>
       <input
         className={classNames('input', { 'input--active': inputFocus })}
         type={type}
+        id={id}
         placeholder={placeholder}
         onChange={onChangeCallback}
         onKeyDown={onKeyDownCallback}

@@ -42,4 +42,11 @@ describe('Input', () => {
     expect(input.find('label').text()).toBe('Email');
     expect(input.find('label').length).toBe(1);
   });
+
+  it('Should contain an id prop', () => {
+    const input = shallow(<Input type='text' label='Email' id='email' />);
+
+    expect(input.find('input').prop('id')).toBe('email');
+    expect(input.find('label').prop('htmlFor')).toBe('email');
+  });
 });
