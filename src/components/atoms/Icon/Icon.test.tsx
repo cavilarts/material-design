@@ -1,5 +1,8 @@
-import { shallow } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import Icon from './index';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+
+configure({ adapter: new Adapter() });
 
 describe('Icon', () => {
   it('should render an Icon component', () => {

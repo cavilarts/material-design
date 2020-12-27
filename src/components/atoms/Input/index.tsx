@@ -27,9 +27,13 @@ export interface inputProps {
 
 const Input: React.FC<inputProps> = ({ type, label, placeholder, id, onChange, onKeyDown }) => {
   const [inputFocus, setInputFocus] = useState(false);
+  const [value, setValue] = useState('');
 
   const onChangeCallback = useCallback(
     event => {
+      console.log(event.target.value);
+
+      setValue(event.target.value);
       if (onChange) {
         onChange(event.target.value);
       }
@@ -63,6 +67,7 @@ const Input: React.FC<inputProps> = ({ type, label, placeholder, id, onChange, o
         onKeyDown={onKeyDownCallback}
         onFocus={() => setInputFocus(true)}
         onBlur={() => setInputFocus(false)}
+        value={value}
       />
     </div>
   );

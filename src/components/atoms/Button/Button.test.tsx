@@ -1,5 +1,8 @@
-import { shallow } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import Button from './index';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+
+configure({ adapter: new Adapter() });
 
 describe('Button', () => {
   it('Should render a button primary by default', () => {
@@ -20,5 +23,11 @@ describe('Button', () => {
 
     button.simulate('click', {});
     expect(clickButton).toHaveBeenCalled();
+  });
+
+  it('Should do nothing if onCLick callback is not provided', () => {
+    const button = shallow(<Button></Button>);
+
+    button.simulate('click', {});
   });
 });

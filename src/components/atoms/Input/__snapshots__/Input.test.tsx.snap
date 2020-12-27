@@ -1,3 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input Should render a default input 1`] = `ShallowWrapper {}`;
+exports[`Input Should render a default input 1`] = `
+<div
+  className="input__wrapper"
+>
+  <span
+    className="input__labelWrapper"
+  />
+  <input
+    className="input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
