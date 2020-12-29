@@ -1,6 +1,7 @@
 import { shallow, configure } from 'enzyme';
-import Input from './index';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+
+import Input from './index';
 
 configure({ adapter: new Adapter() });
 

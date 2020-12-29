@@ -31,8 +31,6 @@ const Input: React.FC<inputProps> = ({ type, label, placeholder, id, onChange, o
 
   const onChangeCallback = useCallback(
     event => {
-      console.log(event.target.value);
-
       setValue(event.target.value);
       if (onChange) {
         onChange(event.target.value);

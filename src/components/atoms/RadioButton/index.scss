@@ -1,0 +1,60 @@
+.radio {
+  display: flex;
+  outline: none;
+  margin: 5px;
+
+  &__wrapper {
+    box-sizing: border-box;
+    display: flex;
+    width: 20px;
+    height: 20px;
+    position: relative;
+  }
+
+  &__outerCircle {
+    box-sizing: border-box;
+    display: block;
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: border-color ease 280ms;
+    width: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.54);
+
+    &--selected {
+      border-color: #ff4081;
+    }
+  }
+
+  &__innerCircle {
+    background-color: #ff4081;
+    border-radius: 50%;
+    box-sizing: border-box;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    transition: transform ease 280ms, background-color ease 280ms;
+    transform: scale(0.001);
+
+    &--selected {
+      transform: scale(0.5);
+    }
+  }
+
+  &__input {
+    visibility: hidden;
+  }
+
+  &__labelContent {
+    user-select: auto;
+    display: flex;
+    order: 0;
+    line-height: inherit;
+    padding-left: 8px;
+  }
+}

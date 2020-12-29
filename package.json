@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --update-snapshot",
+    "test": "jest --watch",
     "coverage": "jest -update-snapshot --collectCoverage",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",

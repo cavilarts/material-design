@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio Button Should render a radio button element 1`] = `
+<div
+  className="radio_listWrapper"
+>
+  <label
+    className="radio"
+    htmlFor="radio-0"
+    key="0"
+  >
+    <span>
+      <span />
+      <span />
+      <input
+        checked={true}
+        id="radio-0"
+        name="Radio Option"
+        onClick={[Function]}
+        type="radio"
+        value="Radio Option"
+      />
+    </span>
+    <span>
+      Radio Option
+    </span>
+  </label>
+</div>
+`;
